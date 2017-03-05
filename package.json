@@ -1,7 +1,7 @@
 {
-  "name": "babel-plugin-directory-named",
-  "version": "1.0.0",
-  "description": "",
+  "name": "babel-plugin-directory-named-module",
+  "version": "1.0.2",
+  "description": "Another babel plugin to save your time and keyboard :)",
   "main": "lib",
   "scripts": {
     "test": "mocha --harmony --compilers js:babel-core/register src/spec",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mdluo/babel-plugin-directory-named.git"
+    "url": "git+https://github.com/mdluo/babel-plugin-directory-named-module.git"
   },
   "author": "Mingdong Luo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mdluo/babel-plugin-directory-named/issues"
+    "url": "https://github.com/mdluo/babel-plugin-directory-named-module/issues"
   },
-  "homepage": "https://github.com/mdluo/babel-plugin-directory-named#readme",
+  "homepage": "https://github.com/mdluo/babel-plugin-directory-named-module#readme",
   "dependencies": {
     "babel-core": "^6.23.1",
     "babel-preset-es2015": "^6.22.0"
