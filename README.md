@@ -1,5 +1,7 @@
 # babel-plugin-directory-named-module
 
+[![NPM](https://nodei.co/npm/babel-plugin-directory-named-module.png)](https://nodei.co/npm/babel-plugin-directory-named-module/)
+
 ## Example
 
 Babel plugin to resolve
