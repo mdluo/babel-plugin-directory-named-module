@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-directory-named-module",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "Another babel plugin to save your time and keyboard :)",
   "main": "lib",
   "scripts": {

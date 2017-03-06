@@ -1,6 +1,9 @@
 import path from 'path'
 
-const defaultExtensions = ['.js', '.jsx', '.es', '.es6']
+import transformRequireCall from './transformers/require'
+import transformImportCall from './transformers/import'
+
+export const defaultExtensions = ['.js', '.jsx', '.es', '.es6']
 
 function resolvable(p) {
   try {
@@ -13,17 +16,11 @@ function resolvable(p) {
 export default function ({ types: t }) {
   return {
     visitor: {
+      CallExpression({ node }) {
+        transformRequireCall(t, node)
+      },
       ImportDeclaration({ node }) {
-        const soursePath = node.source.value
-        const basename = path.basename(soursePath)
-        if (!resolvable(soursePath)) {
-          for (let i = 0; i < defaultExtensions.length; i++) {
-            const newPath = soursePath + path.sep + basename + defaultExtensions[i]
-            if (resolvable(newPath)) {
-              node.source.value = newPath
-            }
-          }
-        }
+        transformImportCall(t, node)
       },
     },
   }
